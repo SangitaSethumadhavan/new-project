@@ -6,6 +6,7 @@ before_install:
 script:
   - docker run -e CI=true sangeetha/gitproject npm run test
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker"
