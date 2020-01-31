@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t sangeetha/gitproject -f Dockerfile.dev .
 script:
-  - docker run sangeetha/gitproject npm run test -- --coverage
+  - docker run -e CI=true sangeetha/gitproject npm run test
